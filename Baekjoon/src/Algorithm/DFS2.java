@@ -3,10 +3,9 @@ package Algorithm;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
-public class BFS2 {
-    public static void main(String[] args) {
+public class DFS2 {
+    public static void main(String[] arg){
         List<LinkedList<Integer>> linkedLists = new ArrayList<>(9);
         boolean[] isVisited = new boolean[9];
 
@@ -34,30 +33,21 @@ public class BFS2 {
         linkedLists.get(8).add(1);
         linkedLists.get(8).add(7);
 
-        System.out.println("BFS Example");
+        System.out.println("DFS Example");
 
-        BreadthFirstSearch(linkedLists, isVisited);
+        DepthFirstSearch(linkedLists, isVisited, 1);
     }
 
-    public static void BreadthFirstSearch(List<LinkedList<Integer>> linkedList, boolean[] isVisited){
-
-        Queue<Integer> queue = new LinkedList<>();
-        int currentNode = 1;
-        int nextNode = 0;
-
-        queue.add(currentNode);
-        isVisited[currentNode] = true;
-
-        while(!queue.isEmpty()){
-            currentNode = queue.remove();
+    public static void DepthFirstSearch(List<LinkedList<Integer>> linkedList, boolean[] isVisited, int currentNode){
+        if(!isVisited[currentNode]){
             System.out.println("currentNode = " + currentNode);
+            isVisited[currentNode] = true;
+        }
 
-            for(int i = 0; i < linkedList.get(currentNode).size(); i++){
-                nextNode = linkedList.get(currentNode).get(i);
-                if(!isVisited[nextNode]){
-                    queue.add(nextNode);
-                    isVisited[nextNode] = true;
-                }
+        for(int i = 0; i < linkedList.get(currentNode).size(); i++){
+            int nextNode = (int) linkedList.get(currentNode).get(i);
+            if(!isVisited[nextNode]){
+                DepthFirstSearch(linkedList, isVisited, nextNode);
             }
         }
     }
