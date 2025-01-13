@@ -1,12 +1,14 @@
+package Algorithm;
+
 import java.util.*;
 
-class Graph{
+class DFS_Graph {
     private LinkedList<Integer> adjList[]; // 인접 리스트
     private int Node_Number;    //  노드 개수
 
     // 인접 리스트 초기화
     @SuppressWarnings("unchecked")
-    Graph(int Node_Number){
+    DFS_Graph(int Node_Number){
         this.Node_Number = Node_Number;
         adjList = new LinkedList[Node_Number]; // 배열 크기 설정
 
@@ -46,7 +48,7 @@ public class DFS{
 
         // Graph       graph =  new     Graph    ()  ;
         // 자료형(클래스명) 객체명 = new예약어 클래스명 생성자호출;
-        Graph graph = new Graph(node);
+        DFS_Graph graph = new DFS_Graph(node);
 
         // 간선에 노드 추가
         for(int i = 0; i < edge; i++){

@@ -1,12 +1,14 @@
+package Algorithm;
+
 import java.util.*;
 
-class Graph {
+class BFS_Graph {
     private LinkedList<Integer> adjList[];
     private int node_Number;
 
     // 인접 리스트 초기화
     @SuppressWarnings("unchecked")
-    Graph(int node_Number) {
+    BFS_Graph(int node_Number) {
         this.node_Number = node_Number;
         adjList = new LinkedList[node_Number];
 
@@ -56,7 +58,7 @@ public class BFS {
         int st_Node = sc.nextInt(); // 시작 노드 입력
 
         // 그래프 객체 생성
-        Graph graph = new Graph(node);
+        BFS_Graph graph = new BFS_Graph(node);
 
         System.out.print(("노드 입력 : "));
         // 간선에 노드 추가
