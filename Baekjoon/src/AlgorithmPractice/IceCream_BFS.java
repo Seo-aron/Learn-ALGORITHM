@@ -65,5 +65,6 @@ public class IceCream_BFS {
         }
 
         System.out.println(result);
+        int x = 1;
     }
 }
