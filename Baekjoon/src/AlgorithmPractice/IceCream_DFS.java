@@ -50,6 +50,5 @@ public class IceCream_DFS {
         }
 
         System.out.println(result);
-        int x = 1;
     }
 }
