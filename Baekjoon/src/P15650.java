@@ -22,7 +22,6 @@ public class P15650 {
         int n = sc.nextInt();   // 1~n까지 범위
         int m = sc.nextInt();   // 몇개 뽑을건지
         int[] arr = new int[n];
-        boolean[] visited = new boolean[n];
 
         for (int i = 0; i < n; i++){
             arr[i] = i + 1;
