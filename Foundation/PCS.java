@@ -10,8 +10,6 @@
     - 부분집합 (Subsets) : 주어진 n개의 원소에서 일부 또는 전부를 선택하는 경우의 수
             총 개수 : 2^n (공집합 포함)
  */
-package Foundation;
-
 import java.util.ArrayList;
 import java.util.List;
 
