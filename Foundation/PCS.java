@@ -73,7 +73,5 @@ public class PCS {
 
         System.out.println("부분집합");
         subset(arr, new ArrayList<>(), 0);
-
-        System.out.println();
     }
  }
