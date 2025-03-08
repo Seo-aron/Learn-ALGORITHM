@@ -46,6 +46,21 @@ public class PCS {
         }
     }
 
+    // 부분집합
+    public static void subset(int[] arr, List<Integer> result, int index){
+        if (index == arr.length) {
+            System.out.println(result);
+            return;
+        }
+        // 원소를 포함하지 않는 경우
+        subset(arr, result, index + 1);
+
+        // 원소를 포함하는 경우
+        result.add(arr[index]);
+        subset(arr, result, index + 1);
+        result.remove(result.size() - 1);
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 3};
         int r = 2;
@@ -55,5 +70,8 @@ public class PCS {
 
         System.out.println("조합");
         combination(arr, new ArrayList<>(), 0, r);
+
+        System.out.println("부분집합");
+        subset(arr, new ArrayList<>(), 0);
     }
  }
