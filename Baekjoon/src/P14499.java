@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class P14499 {
 	static int y;
 	static int x;
 	static int dice_y;
