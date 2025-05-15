@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class P2636 {
 	static int y;
 	static int x;
 	static int[][] field;
