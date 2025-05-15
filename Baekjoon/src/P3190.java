@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main {
+public class P3190 {
 	static int size;
 	static int[][] field;
 	static HashMap<Integer, String> hm;
