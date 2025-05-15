@@ -5,22 +5,15 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class P2805 {
-    static int sum;
 
     public static boolean isChecked(int[] arr, int n, int m, int mid){
-        int[] mod = new int[n];
-        sum = 0;
+        long sum = 0;
 
         for (int i = 0; i < n; i++) {
-            mod[i] = arr[i] - mid;
-            sum += mod[i];
+            if (arr[i] > mid) sum += arr[i] - mid;
         }
 
-        if (sum == m) {
-            return true;
-        } else {
-            return false;
-        }
+        return sum >= m;
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -38,17 +31,19 @@ public class P2805 {
 
         int left = 1;
         int right = arr[N-1];
+        int ans = 0;
 
         while (left <= right) {
             int mid = (left + right) / 2;
 
             if (isChecked(arr, N, M, mid)){
-                // M값과 일치 = 정답
-                System.out.println(mid);
+                ans = mid;
+                left = mid + 1;
             } else {
-                if (sum > mid) left = mid + 1;
-                else if (sum < mid) right = mid - 1;
+                right = mid - 1;
             }
         }
+
+        System.out.println(ans);
     }
 }
