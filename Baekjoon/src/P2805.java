@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class P2805 {
-
     public static boolean isChecked(int[] arr, int n, int m, int mid){
         long sum = 0;
 
