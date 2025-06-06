@@ -25,7 +25,7 @@ public class P11053 {
             }
 
             for (int j=0; j<list.size(); j++){
-                if (a[i] < list.get(j)) {
+                if (a[i] <= list.get(j)) {
                     list.set(j,a[i]);
                     break;
                 }
