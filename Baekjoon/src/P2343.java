@@ -9,5 +9,11 @@ public class P2343 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int cls = Integer.parseInt(st.nextToken());
         int blue = Integer.parseInt(st.nextToken());
+        int[] gl = new int[cls];
+
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < cls; i++) {
+            gl[i] = Integer.parseInt(st.nextToken());
+        }
     }
 }
